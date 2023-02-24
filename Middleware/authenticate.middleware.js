@@ -1,10 +1,10 @@
 const jwt = require("jsonwebtoken");
 
 const authentication = (req, res, next) =>{
-    const token = req.headers.Authorization;
+    const token = req.headers.authorization;
     jwt.verify(token, 'bblooms', (err, decoded)=>{
         if(decoded){
-            req.body.user=decoded.userID;
+            // req.body.user=decoded.userID;
             next();
         }
         else{
