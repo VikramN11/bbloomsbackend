@@ -24,7 +24,7 @@ app.get("/", (req, res)=>{
 app.use("/adminusers", adminuserRouter);
 app.use("/users", userRouter);
 
-app.use(authentication);
+// app.use(authentication);
 
 //best Selling Birthday Gift
 app.use("/products/birthday", bestsellingRouter);
