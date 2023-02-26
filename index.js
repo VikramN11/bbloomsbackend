@@ -12,6 +12,7 @@ require("dotenv").config();
 const cors = require("cors");
 const { adminuserRouter } = require("./Route/adminuser.route");
 const { checkoutRouter } = require("./Route/checkout.route");
+const { cartRouter } = require("./Route/cart.route");
 
 
 const app = express();
@@ -44,6 +45,9 @@ app.use("/products/plantbirth", plantbirthRouter);
 
 //best selling flowers
 app.use("/products/bestflower", bestflowerRouter);
+
+//cart
+app.use("/cart", cartRouter);
 
 //Checkout
 app.use("/checkout", checkoutRouter);
