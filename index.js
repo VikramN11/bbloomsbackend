@@ -13,6 +13,7 @@ const cors = require("cors");
 const { adminuserRouter } = require("./Route/adminuser.route");
 const { checkoutRouter } = require("./Route/checkout.route");
 const { cartRouter } = require("./Route/cart.route");
+const { birthdaycakeRouter } = require("./Route/Products/Birthday/birthdaycake.route");
 
 
 const app = express();
@@ -33,6 +34,9 @@ app.use("/products/birthday", bestsellingRouter);
 
 //birthday flower
 app.use("/products/birthflower", birthflowerRouter);
+
+//birthday cake
+app.use("/products/birthdaycake", birthdaycakeRouter);
 
 //All flower
 app.use("/products/allflower", allflowerRouter);
